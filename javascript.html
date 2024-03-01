@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="togglebutton" style="background-color: green; color: white; border-radius: 5px; border: 2px solid green;" class="btn btn-warning btn-sm">show</button>
+    <br>
+    <p id="para" style="display: none; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odio quas eius, quia iste necessitatibus
+        officia ut dignissimos, adipisci sequi natus perferendis quisquam, accusantium tempora!</p>
+
+</body>
+
+<script>
+    let toggle = document.getElementById('togglebutton')
+    let para = document.getElementById('para')
+
+    toggle.addEventListener('click',function(){
+
+        if(para.style.display==='none' || para.style.display===""){
+            para.style.display='block';
+            toggle.style.backgroundColor='red'
+            toggle.style.border='2px solid red'
+            toggle.textContent='hide';
+        }else{
+            para.style.display='none';
+            toggle.style.backgroundColor='green'
+            toggle.style.border='2px solid green'
+            toggle.textContent='show';
+        }
+    })
+</script>
+
+</html>
